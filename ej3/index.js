@@ -6,12 +6,7 @@ link.addEventListener('click', show)
  */
 function show (e) {
   e.preventDefault()
-  const text = e.target.textContent
-
-  text === 'Seguir leyendo'
-    ? e.target.textContent = 'Contraer'
-    : e.target.textContent = 'Seguir leyendo'
-
-  const hiddenP = document.querySelector('.adicional')
-  hiddenP.classList.toggle('oculto')
+  const span = document.querySelector('.adicional.oculto')
+  span.classList.remove('oculto')
+  e.target.classList.add('oculto')
 }
