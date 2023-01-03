@@ -18,4 +18,6 @@ function handleSubmit (e) {
 
   const greet = `Hola ${name} ${surname}, gracias por rellenar el formulario.`
   pGreet.textContent = greet
+
+  window.location.hash = 'saludo'
 }
