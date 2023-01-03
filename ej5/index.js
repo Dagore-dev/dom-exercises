@@ -1,23 +1,27 @@
-const form = document.querySelector('[action="#saludo"]')
-const pGreet = document.getElementById('saludo')
-const formFields = {
-  name: document.getElementById('nombre'),
-  surname: document.getElementById('apellido')
-}
+window.addEventListener('DOMContentLoaded', main)
 
-form.addEventListener('submit', handleSubmit)
+function main () {
+  const form = document.querySelector('[action="#saludo"]')
+  const pGreet = document.getElementById('saludo')
+  const formFields = {
+    name: document.getElementById('nombre'),
+    surname: document.getElementById('apellido')
+  }
 
-/**
- * @param {SubmitEvent} e
- */
-function handleSubmit (e) {
-  e.preventDefault()
+  form.addEventListener('submit', handleSubmit)
 
-  const name = formFields.name.value
-  const surname = formFields.surname.value
+  /**
+   * @param {SubmitEvent} e
+   */
+  function handleSubmit (e) {
+    e.preventDefault()
 
-  const greet = `Hola ${name} ${surname}, gracias por rellenar el formulario.`
-  pGreet.textContent = greet
+    const name = formFields.name.value
+    const surname = formFields.surname.value
 
-  window.location.hash = 'saludo'
+    const greet = `Hola ${name} ${surname}, gracias por rellenar el formulario.`
+    pGreet.textContent = greet
+
+    window.location.hash = 'saludo'
+  }
 }
