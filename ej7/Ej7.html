@@ -1,29 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 	<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script type="module" src="./index.js"></script>
 	<title>Ej7</title>
 </head>
 <body>
-  <p>
-    <label for="valor1">Ingrese primer valor:</label>
-    <input type="number" id="valor1" />
-  </p>
-  <p>
-    <label for="valor2">Ingrese segundo valor:</label>
-    <input type="number" id="valor2" />
-  </p>
-  <p>
-    <input type="checkbox" id="suma" />Sumar
-  </p>
-  <p>
-    <input type="checkbox" value="resta" id="resta" />Restar
-  </p>
-  <p>
-    <input type="button" value="Operar" id="calculo" />
-  </p>
+
+  <form id="form">
+    <p>
+      <label for="valor1">Ingrese primer valor:</label>
+      <input type="number" id="valor1" required />
+    </p>
+
+    <p>
+      <label for="valor2">Ingrese segundo valor:</label>
+      <input type="number" id="valor2" required />
+    </p>
+
+    <p>
+      <input type="checkbox" value="suma" id="suma" name="operations[]"/>
+      <label for="suma">Sumar</label>
+    </p>
+
+    <p>
+      <input type="checkbox" value="resta" id="resta" name="operations[]" />
+      <label for="resta">Restar</label>
+    </p>
+
+    <p>
+      <input type="submit" value="Operar" id="calculo" />
+    </p>
+  </form>
+
   <p id="resultado"></p>
   
 </body>
