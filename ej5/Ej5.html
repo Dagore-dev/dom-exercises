@@ -11,10 +11,10 @@
     
     <form action="#saludo">
         <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ]+\s*[a-zA-ZáéíóúÁÉÍÓÚ]*">
+        <input type="text" id="nombre" required pattern="([a-zA-ZáéíóúÁÉÍÓÚ]+\s*[a-zA-ZáéíóúÁÉÍÓÚ]*)+">
         
         <label for="apellido">Apellido:</label>
-        <input type="text" id="apellido" required pattern="[a-zA-ZáéíóúÁÉÍÓÚ]+\s*[a-zA-ZáéíóúÁÉÍÓÚ]*">
+        <input type="text" id="apellido" required pattern="([a-zA-ZáéíóúÁÉÍÓÚ]+\s*[a-zA-ZáéíóúÁÉÍÓÚ]*)+">
         
         <input type="submit" value="Rellenar datos">     
     </form>
