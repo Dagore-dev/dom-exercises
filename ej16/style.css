@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.container button {
+  grid-column: span 2;
+}
+
+.box{
+  width: 150px;
+  height: 150px;
+  border: thin solid silver;
+  background: #F5F5F5;
+  float: left;
+  margin: 20px;
+  font-size: 6em;
+  color: #333;
+  text-align: center;
+  padding: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.box p {
+  margin: .2em 0;
+}
+
+.box#result {
+  border-color: black;
+  grid-column: span 2;
+}
